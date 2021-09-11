@@ -32,7 +32,7 @@ public class ClearsalePlugin implements FlutterPlugin, MethodCallHandler, Activi
         mBehavior.start();
         String sessionId = mBehavior.generateSessionID();
         mBehavior.collectDeviceInformation(sessionId);
-        result.success("ok");
+        result.success(sessionId);
       } catch (Exception e) {
         result.error("ERROR", e.toString(), null);
       }
